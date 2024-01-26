@@ -21,4 +21,4 @@ class Solution:
             current_node.next=list2
         return dummy_node.next
 
-    
+#https://www.youtube.com/watch?v=jXu-H7XuClE

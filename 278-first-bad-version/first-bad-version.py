@@ -12,3 +12,5 @@ class Solution:
             else:
                 low=mid+1
         return low
+    # def isBadVersion(version):
+    #     return version >= 4

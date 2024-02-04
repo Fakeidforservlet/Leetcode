@@ -4,11 +4,23 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        ans=1
-        while (ans * ans)<x:
-            ans+=1
-        if (ans * ans)==x:
-            return ans
-        else:
-            return ans-1
+        # ans=1
+        # while (ans * ans)<x:
+        #     ans+=1
+        # if (ans * ans)==x:
+        #     return ans
+        # else:
+        #     return ans-1
+
+        #https://www.youtube.com/watch?v=Bsv3FPUX_BA
+
+        low=1
+        high=x
+        while low<=high:
+            mid=low+(high-low)//2
+            if (mid*mid)<=x:
+                low=mid+1
+            else:
+                high=mid-1
+        return high
         

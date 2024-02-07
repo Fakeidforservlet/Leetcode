@@ -37,6 +37,9 @@ class Solution(object):
                 nums1[k] =  nums2[j]
                 j-=1
                 k-=1   
-        
+        while j>=0:
+            nums1[k] =  nums2[i]
+            i-=1
+            k-=1 
         return nums1
 

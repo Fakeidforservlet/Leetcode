@@ -6,9 +6,20 @@ class Solution(object):
         :rtype: bool
         """
         #https://www.youtube.com/watch?v=t46QZYmqfoo
-        dic={}
+        # dic={}
+        # for i in range(len(nums)):
+        #     if nums[i] in dic and abs(i-dic[nums[i]])<=k:
+        #         return True
+        #     dic[nums[i]]=i
+        # return False
+
+        #
+        num_set=set()
         for i in range(len(nums)):
-            if nums[i] in dic and abs(i-dic[nums[i]])<=k:
+            if i>k:
+                num_set.remove(nums[i-k-1])
+            if nums[i] in num_set:
                 return True
-            dic[nums[i]]=i
+            num_set.add(nums[i])
         return False
+            

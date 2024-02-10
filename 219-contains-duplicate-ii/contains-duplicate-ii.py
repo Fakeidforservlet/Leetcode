@@ -13,7 +13,7 @@ class Solution(object):
         #     dic[nums[i]]=i
         # return False
 
-        #
+        #https://www.youtube.com/watch?v=AyiGBwFlMb8
         num_set=set()
         for i in range(len(nums)):
             if i>k:

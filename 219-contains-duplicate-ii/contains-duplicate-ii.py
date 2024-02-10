@@ -14,12 +14,26 @@ class Solution(object):
         # return False
 
         #https://www.youtube.com/watch?v=AyiGBwFlMb8
+        # num_set=set()
+        # for i in range(len(nums)):
+        #     if i>k:
+        #         num_set.remove(nums[i-k-1])
+        #     if nums[i] in num_set:
+        #         return True
+        #     num_set.add(nums[i])
+        # return False
         num_set=set()
-        for i in range(len(nums)):
-            if i>k:
-                num_set.remove(nums[i-k-1])
-            if nums[i] in num_set:
+        left=right=0
+        while  right < len(nums):
+            if nums[right] in num_set:
                 return True
-            num_set.add(nums[i])
+            num_set.add(nums[right])
+            right+=1
+            if (right-left)>k:
+                num_set.remove(nums[left])
+                left+=1
         return False
+
+
+
             

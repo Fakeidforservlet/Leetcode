@@ -21,3 +21,17 @@ class Solution(object):
             if current_capacity>capacity:
                 return False
         return True
+
+        #or 
+
+        timeline = [0] * 1001
+        for numPassengers, start, end in trips:
+            timeline[start] += numPassengers
+            timeline[end] -= numPassengers
+        
+        passengers = 0
+        for change in timeline:
+            passengers += change
+            if passengers > capacity:
+                return False
+        return True

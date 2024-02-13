@@ -5,6 +5,7 @@ class Solution(object):
         :rtype: str
         """
         #https://www.youtube.com/watch?v=vTlVtLvPQo4
+        if len(s)<2:return s
         def expandAroundOrbit(left,right):
             while left>=0 and right<len(s) and s[left]==s[right]:
                 left-=1

@@ -23,6 +23,7 @@ class Solution(object):
         # return currString
 
         #simple_one
+        #https://www.youtube.com/watch?v=2CWaEsQly4o
         stack=[]
         for i in s:
             if i!=']':
